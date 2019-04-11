@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dhimasbayu.lowongankerja1">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".UpdatePostActivity"
+            android:label="Edit Post"/>
+        <activity android:name=".InsertPostActivity"
+            android:label="Insert Post"
+            android:parentActivityName=".PostingActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVY"
+                android:value="com.dhimmasbayu.lowongankerja1.PostingActivity"/>
+        </activity>
+        <activity android:name=".PostingActivity"
+            android:label="Home"/>
+        <activity android:name=".DetailPostingActivity"
+            android:label="Detail Post">
+        </activity>
+        <activity android:name=".RegisterActivity"
+            android:label="Sign Up"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVIY"
+                android:value="com.dhimasbayu.lowongankerja1.MainActivity"/>
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
